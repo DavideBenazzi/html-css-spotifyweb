@@ -34,17 +34,20 @@ body {
 main {
   flex-grow: 1;
 }
-
+/* MENU */
 main .menu {
   background: #000000;
   flex-basis: 200px;
+  justify-content: space-between;
 }
 
+
+/* CATALOGO */
 main .catalogo {
   flex-grow: 1;
   position: relative;
 }
-
+/* CATALOGO FIXED BAR */
 main .catalogo .fixed-bar {
   height: 100px;
   width: 100%;
@@ -53,8 +56,22 @@ main .catalogo .fixed-bar {
   left: 0;
   background: rgba(100, 100, 100, 0.5);
   z-index: 1;
+  justify-content: center;
 }
 
+main .catalogo .fixed-bar .btn-upgrade {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin-right: 30px;
+}
+/* CATALOGO SCROLLABLE */
+/* NAVBAR */
 main .catalogo .scrollable {
   height: 100%;
   width: 100%;
@@ -65,9 +82,23 @@ main .catalogo .scrollable {
   padding: 100px 20px 50px;
 }
 
+main .catalogo .scrollable .navbar ul {
+  justify-content: center;
+  list-style: none;
+}
+
+main .catalogo .scrollable .navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  margin: 10px;
+}
+
 footer {
-  flex-basis: 200px;
+  flex-basis: 100px;
   background: #272727;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .box {
@@ -76,8 +107,17 @@ footer {
   background: #ffffff;
   color: #000;
   border: 2px solid orange;
+  margin: 5px;
 }
 
 .artisti .box {
   border-radius: 50%;
+}
+
+.box-small {
+  height: 50px;
+  width: 200px;
+  background: #fff;
+  color: #000;
+  border: 2px solid gold;
 }
