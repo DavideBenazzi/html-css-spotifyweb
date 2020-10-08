@@ -41,7 +41,6 @@ main .menu {
   justify-content: space-between;
 }
 
-
 /* CATALOGO */
 main .catalogo {
   flex-grow: 1;
@@ -71,7 +70,7 @@ main .catalogo .fixed-bar .btn-upgrade {
   margin-right: 30px;
 }
 /* CATALOGO SCROLLABLE */
-/* NAVBAR */
+/* SCROLLABLE */
 main .catalogo .scrollable {
   height: 100%;
   width: 100%;
@@ -81,7 +80,7 @@ main .catalogo .scrollable {
   overflow-y: auto;
   padding: 100px 20px 50px;
 }
-
+/* NAVBAR */
 main .catalogo .scrollable .navbar ul {
   justify-content: center;
   list-style: none;
@@ -93,10 +92,15 @@ main .catalogo .scrollable .navbar ul li a {
   opacity: 0.7;
   margin: 10px;
 }
-
+/* FOOTER */
 footer {
   flex-basis: 100px;
   background: #272727;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .sinister {
   justify-content: space-between;
   align-items: center;
 }
@@ -120,4 +124,21 @@ footer {
   background: #fff;
   color: #000;
   border: 2px solid gold;
+}
+
+.media {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.media .barra-volume {
+  height: 4px;
+  width: 100%;
+  background: #4d4d4d;
+}
+
+.media .volume {
+  width: 20%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
 }
