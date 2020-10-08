@@ -142,3 +142,20 @@ footer .sinister {
   border: 2px solid #ccc;
   border-radius: 4px;
 }
+
+.progresso {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.progresso .barra-volume {
+  height: 4px;
+  width: 100%;
+  background: #4d4d4d;
+}
+
+.progresso .volume {
+  width: 20%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
