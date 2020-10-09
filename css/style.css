@@ -69,19 +69,22 @@ main .menu {
 main .menu .colonna-laterale {
   flex-grow: 1;
   padding: 15px 0;
+  font-weight: 700;
 }
 
 main .menu .colonna-laterale > a img {
   height: 50px;
+  opacity: 1;
 }
 
 main .menu img {
   height: 25px;
   margin-right: 10px;
+  opacity: 0.75;
 }
 
 main .menu .colonna-laterale li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 main .menu .colonna-laterale li a {
@@ -89,7 +92,7 @@ main .menu .colonna-laterale li a {
 }
 
 main .menu .colonna-laterale .box-piu {
-  background: #cecece;
+  background: #999999;
   color: #000;
   display: inline-block;
   height: 30px;
@@ -97,6 +100,39 @@ main .menu .colonna-laterale .box-piu {
   font-size: 25px;
   margin-right: 10px;
 
+}
+/* COLONNA LATERALE INSTALLA */
+main .menu .johndoe {
+  align-self: flex-start;
+  padding: 10px;
+  width: 100%;
+}
+
+main .menu .johndoe .installa a {
+  color: #2f2f2f;
+  font-weight: 700;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+main .menu .johndoe .installa a i {
+  font-size: 12px;
+  margin-right: 10px;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+main .menu .johndoe .profile {
+  padding-top: 10px;
+  font-weight: 700;
+}
+
+main .menu .johndoe .profile img {
+  background: #7f7f7f;
+  border-radius: 50%;
 }
 
 /* CATALOGO */
