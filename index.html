@@ -6,207 +6,291 @@
     <!-- FONTAWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- FONT FAMILY -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="./css/style.css">
     <title>html-css-spotifyweb</title>
   </head>
 
-  <body class="app flex-column">
-    <main class="flex-row">
-      <!-- COLONNA LATERALE -->
-      <aside class="menu flex-column">
-        <div class="logo-link">
-          <a href="#">logo</a>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Cerca</a>
-            </li>
-            <li>
-              <a href="#">La tua libreria</a>
-            </li>
-          </ul>
-          <h3>
-            PLAYLIST
-          </h3>
-          <ul>
-            <li>
-              <a href="#">Crea playlist</a>
-            </li>
-            <li>
-              <a href="#">nome playlist</a>
-            </li>
-            <li>
-              <a href="#">nome playlist</a>
-            </li>
-            <li>
-              <a href="#">nome playlist</a>
-            </li>
-            <li>
-              <a href="#">nome playlist</a>
-            </li>
-            <li>
-              <a href="#">nome playlist</a>
-            </li>
-            <li>
-              <a href="#">nome playlist</a>
-            </li>
-            <li>
-              <a href="#">nome playlist</a>
-            </li>
-          </ul>
-        </div>
-        <div class="johndoe">
-          JOHNDOE
-        </div>
-      </aside>
-      <!-- CATALOGO -->
-      <div class="catalogo">
-        <div class="fixed-bar flex-column">
-          <a class="btn-upgrade" href="#">
-            effettua l'upgrade
-          </a>
-        </div>
-        <!-- FINESTRA SCROLLABLE -->
-        <div class="scrollable">
-          <!-- NAVBAR -->
-          <nav class="navbar">
-            <ul class="flex-row">
+  <body>
+    <div class="app flex-column">
+      <main class="flex-row">
+        <!-- COLONNA LATERALE -->
+        <aside class="menu flex-column">
+          <div class="colonna-laterale">
+            <a href="#">
+              <img src="./img/logo.svg" alt="logo spotify">
+            </a>
+            <ul>
               <li>
-                <a href="#">
-                  IN EVIDENZA
-                </a>
+                <a href="#"><img src="./img/home.svg" alt="home">Home</a>
               </li>
               <li>
-                <a href="#">
-                  PODCAST
-                </a>
+                <a href="#"><img src="./img/search.svg" alt="search">Cerca</a>
               </li>
               <li>
-                <a href="#">
-                  CLASSIFICHE
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  GENERI E MOOD
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  NUOVE USCITE
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  SCOPRI
-                </a>
+                <a href="#"><img src="./img/libreria.svg" alt="libreria">La tua libreria</a>
               </li>
             </ul>
-          </nav>
-          <h3>
-            Recently played
-          </h3>
-          <div class="recently flex-row">
-            <div class="box">
-              debug
+            <h2>
+              PLAYLIST
+            </h2>
+            <ul>
+              <li>
+                <a href="#">+</a>
+                <a href="#">Crea playlist</a>
+              </li>
+              <li>
+                <a href="#">nome playlist</a>
+              </li>
+              <li>
+                <a href="#">nome playlist</a>
+              </li>
+              <li>
+                <a href="#">nome playlist</a>
+              </li>
+              <li>
+                <a href="#">nome playlist</a>
+              </li>
+              <li>
+                <a href="#">nome playlist</a>
+              </li>
+              <li>
+                <a href="#">nome playlist</a>
+              </li>
+              <li>
+                <a href="#">nome playlist</a>
+              </li>
+            </ul>
+          </div>
+          <div class="johndoe">
+            <div class="installa">
+              <a href="#">
+                <i class="fas fa-arrow-circle-down"></i>
+                <span>Installa app</span>
+              </a>
             </div>
-            <div class="box">
-              debug
-            </div>
-            <div class="box">
-              debug
-            </div>
-            <div class="box">
-              debug
-            </div>
-            <div class="box">
-              debug
+            <div class="profile">
+              <img src="./img/profile.svg" alt="profile">
+              <span>JOHNDOE</span>
             </div>
           </div>
-          <h3>
-            Creato per John Doe
-          </h3>
-          <div class="creato flex-row">
-            <div class="box">
-              debug
+        </aside>
+        <!-- CATALOGO -->
+        <div class="catalogo">
+          <div class="fixed-bar flex-column">
+            <a class="btn-upgrade" href="#">
+              effettua l'upgrade
+            </a>
+          </div>
+          <!-- FINESTRA SCROLLABLE -->
+          <div class="scrollable">
+            <!-- NAVBAR -->
+            <nav class="navbar">
+              <ul class="flex-row">
+                <li>
+                  <a href="#">
+                    IN EVIDENZA
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    PODCAST
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    CLASSIFICHE
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    GENERI E MOOD
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    NUOVE USCITE
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    SCOPRI
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <h3>
+              Recently played
+            </h3>
+            <div class="recently flex-row text-center">
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                  <h4>
+                    Heavy Metal
+                  </h4>
+                  <h5>
+                    Subtitle
+                  </h5>
+                </a>
+              </div>
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/stranger.jpeg" alt="stranger things">
+                  <h4>
+                    Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)
+                  </h4>
+                  <h5>
+                    Kyle Dixon & Michael Stein
+                  </h5>
+                </a>
+              </div>
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/aquietplace.jpeg" alt="a quiet place">
+                  <h4>
+                    A quiet place
+                  </h4>
+                  <h5>
+                    Subtitle
+                  </h5>
+                </a>
+              </div>
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/split.jpeg" alt="split">
+                  <h4>
+                    Split
+                  </h4>
+                  <h5>
+                    Subtitle
+                  </h5>
+                </a>
+              </div>
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/cure.jpeg" alt="a cure for wellness">
+                  <h4>
+                    A cure for wellness
+                  </h4>
+                  <h5>
+                    Subtitle
+                  </h5>
+                </a>
+              </div>
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/sinister.jpeg" alt="sinister">
+                  <h4>
+                    Sinister
+                  </h4>
+                  <h5>
+                    Subtitle
+                  </h5>
+                </a>
+              </div>
             </div>
-            <div class="box">
-              debug
+            <h3>
+              Creato per John Doe
+            </h3>
+            <div class="creato flex-row text-center">
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/radar.jpeg" alt="release radar">
+                  <h4>
+                    Release radar
+                  </h4>
+                </a>
+              </div>
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/mixdaily.jpeg" alt="mixdaily">
+                  <h4>
+                    Daily mix 1
+                  </h4>
+                </a>
+              </div>
+            </div>
+            <h3>
+              Artisti piu' popolari
+            </h3>
+            <div class="artisti flex-row text-center">
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/young.jpeg" alt="lana del rey">
+                  <h4>
+                    Lana del Rey
+                  </h4>
+                </a>
+              </div>
+              <div class="copertina">
+                <a href="#">
+                  <img src="./img/einaudi.jpeg" alt="ludovico einauidi">
+                  <h4>
+                    Ludovico Einauidi
+                  </h4>
+                </a>
+              </div>
             </div>
           </div>
-          <h3>
-            Artisti piu' popolari
-          </h3>
-          <div class="artisti flex-row">
-            <div class="box">
-              debug
-            </div>
-            <div class="box">
-              debug
-            </div>
+        </div>
+      </main>
+      <!-- FOOTER -->
+      <footer class="flex-row">
+        <div class="album flex-row box-small">
+          <div class="album">
+            <h4>
+              Sinister
+            </h4>
+            <h5>
+              Brano Nome
+            </h5>
+          </div>
+          <div class="album-icon">
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#"><i class="far fa-folder"></i></a>
           </div>
         </div>
-      </div>
-    </main>
-    <!-- FOOTER -->
-    <footer class="flex-row">
-      <div class="sinister flex-row box-small">
-        <div class="album">
-          <h4>
-            Sinister
-          </h4>
-          <h5>
-            Brano Nome
-          </h5>
+        <div class="player flex-column box-small">
+          <div class="controlli-player">
+            <ul class="flex-row">
+              <li>
+                <a href="#"><i class="fas fa-random"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-step-backward"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="far fa-play-circle"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-step-forward"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-redo-alt"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="progresso flex-row">
+            <span>0:25</span>
+            <div class="barra-volume">
+              <div class="volume">
+              </div>
+            </div>
+            <span>4:35</span>
+          </div>
         </div>
-        <div class="album-icon">
-          <a href="#"><i class="far fa-heart"></i></a>
-          <a href="#"><i class="far fa-folder"></i></a>
-        </div>
-      </div>
-      <div class="player flex-column box-small">
-        <div class="controlli-player">
-          <ul class="flex-row">
-            <li>
-              <a href="#"><i class="fas fa-random"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-step-backward"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="far fa-play-circle"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-step-forward"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-redo-alt"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="progresso flex-row">
-          <span>0:25</span>
+        <div class="media flex-row box-small">
+          <a href="#"><i class="fas fa-server"></i></a>
+          <a href="#"><i class="fas fa-desktop"></i></a>
+          <a href="#"><i class="fas fa-volume-up"></i></a>
           <div class="barra-volume">
             <div class="volume">
             </div>
           </div>
-          <span>4:35</span>
         </div>
-      </div>
-      <div class="media flex-row box-small">
-        <a href="#"><i class="fas fa-server"></i></a>
-        <a href="#"><i class="fas fa-desktop"></i></a>
-        <a href="#"><i class="fas fa-volume-up"></i></a>
-        <div class="barra-volume">
-          <div class="volume">
-          </div>
-        </div>
-      </div>
-    </footer>
-
+      </footer>
+    </div>
   </body>
 </html>
