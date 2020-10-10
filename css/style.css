@@ -97,6 +97,15 @@ main .menu .colonna-laterale li a {
   color: #2f2f2f;
 }
 
+main .menu .colonna-laterale li:hover {
+  color: #ffffff;
+  border-left: 2px solid #acfe2e;
+}
+
+main .menu .colonna-laterale li a:hover {
+  color: #ffffff;
+}
+
 main .menu .colonna-laterale .box-piu {
   background: #999999;
   color: #000;
@@ -120,6 +129,11 @@ main .menu .johndoe .installa a {
   padding-bottom: 10px;
   display: inline-block;
   width: 100%;
+}
+
+main .menu .johndoe .installa a:hover {
+  color: #ffffff;
+  border-left: 2px solid #acfe2e;
 }
 
 main .menu .johndoe .installa a i {
