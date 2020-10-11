@@ -208,7 +208,6 @@ main .catalogo .fixed-bar .btn-upgrade:hover {
   transition: padding 0.4s;
 }
 /* CATALOGO SCROLLABLE */
-/* SCROLLABLE */
 main .catalogo .scrollable {
   height: 100%;
   width: 100%;
@@ -278,22 +277,27 @@ main .catalogo .scrollable h3 ~ p {
 /* COPERTINA */
 main .catalogo .scrollable .copertina {
   width: calc(100% / 6);
-  position: relative;
   padding: 5px;
 }
-                                                 /* ATTENZIONE */
-                                                 /* DA SISTEMARE!! */
-main .catalogo .scrollable .copertina:hover::after {
-  content: '\f144';
-  color: #fff;
-  background: #fff;
-  font-size: 100px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50% , -30%);
+
+main .catalogo .scrollable .copertina .hover-copertina {
+  position: relative;
 }
-                                                    /* ATTENZIONE */
+
+main .catalogo .scrollable .copertina .hover-copertina i {
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  display: none;
+}
+
+main .catalogo .scrollable .copertina a:hover .hover-copertina i {
+  display: inline-block;
+}
+
 main .catalogo .scrollable .artisti img {
   border-radius: 50%;
 }
@@ -333,6 +337,10 @@ footer .album-icon a {
   margin-left: 5px;
 }
 
+footer .album-icon a:hover {
+  opacity: 1;
+}
+
 /* CONTROLLI PLAYER */
 footer .player {
   width: 40%;
@@ -348,10 +356,14 @@ footer .player .controlli-player ul li a {
   margin: 10px;
 }
 
+footer .player .controlli-player ul li a i:hover {
+  transform: scale(1.3 , 1.3);
+}
+
 footer .player .controlli-player ul li:nth-child(3) {
   font-size: 30px;
 }
-
+/* BARRA PROGRESSO */
 footer .progresso {
   justify-content: space-around;
   align-items: center;
@@ -373,6 +385,27 @@ footer .progresso .volume {
   width: 20%;
   border: 2px solid #ccc;
   border-radius: 4px;
+  position: relative;
+}
+
+footer .progresso .volume::after {
+  content: 'o';
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50% , -50%);
+  background: #fff;
+  border-radius: 40%;
+  display: none;
+}
+
+footer .progresso a:hover .volume {
+  border: 2px solid #acfe2e;
+}
+
+footer .progresso a:hover .volume::after {
+  display: inline-block;
 }
 /* MEDIA */
 footer .media {
@@ -388,6 +421,10 @@ footer .media a {
   font-size: 12px;
 }
 
+footer .media a:hover {
+  opacity: 1;
+}
+
 footer .media a:last-child {
   height: 4px;
   width: 100%;
@@ -400,7 +437,28 @@ footer .media .volume {
   width: 30%;
   border: 2px solid #ccc;
   border-radius: 4px;
+  position: relative;
   opacity: 1;
+}
+
+footer .media .volume::after {
+  content: 'o';
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50% , -50%);
+  background: #fff;
+  border-radius: 40%;
+  display: none;
+}
+
+footer .media a:hover .volume {
+  border: 2px solid #acfe2e;
+}
+
+footer .media a:hover .volume::after {
+  display: inline-block;
 }
 
 /* VERSIONE DESKTOP */
