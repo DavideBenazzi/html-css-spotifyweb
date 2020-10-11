@@ -54,6 +54,14 @@ a {
   justify-content: center;
 }
 
+.display-mobile {
+  display: none;
+}
+
+.display-desktop {
+  display: inline-block;
+}
+
 /* MAIN STYLE */
 body .app {
   height: 100vh;
@@ -74,13 +82,14 @@ main .menu {
 
 main .menu .colonna-laterale {
   flex-grow: 1;
-  padding: 15px 10px;
+  padding: 15px 0;
   font-weight: 700;
 }
 
 main .menu .colonna-laterale > a img {
   height: 50px;
   opacity: 1;
+  margin-left: 10px;
 }
 
 main .menu img {
@@ -91,6 +100,7 @@ main .menu img {
 
 main .menu .colonna-laterale li {
   margin-bottom: 15px;
+  padding-left: 10px;
 }
 
 main .menu .colonna-laterale li a {
@@ -98,12 +108,17 @@ main .menu .colonna-laterale li a {
 }
 
 main .menu .colonna-laterale li:hover {
-  color: #ffffff;
   border-left: 2px solid #acfe2e;
+  padding-left: 8px;
 }
 
-main .menu .colonna-laterale li a:hover {
-  color: #ffffff;
+main .menu .colonna-laterale li:hover a {
+  color: #fff;
+  opacity: 1;
+}
+
+main .menu .colonna-laterale h3 {
+  margin-left: 10px;
 }
 
 main .menu .colonna-laterale .box-piu {
@@ -118,7 +133,7 @@ main .menu .colonna-laterale .box-piu {
 /* COLONNA LATERALE INSTALLA */
 main .menu .johndoe {
   align-self: flex-start;
-  padding: 10px;
+  padding: 10px 0;
   width: 100%;
 }
 
@@ -127,6 +142,7 @@ main .menu .johndoe .installa a {
   font-weight: 700;
   border-bottom: 2px solid;
   padding-bottom: 10px;
+  padding-left: 10px;
   display: inline-block;
   width: 100%;
 }
@@ -134,6 +150,7 @@ main .menu .johndoe .installa a {
 main .menu .johndoe .installa a:hover {
   color: #ffffff;
   border-left: 2px solid #acfe2e;
+  padding-left: 8px;
 }
 
 main .menu .johndoe .installa a i {
@@ -146,6 +163,7 @@ main .menu .johndoe .installa a i {
 
 main .menu .johndoe .profile {
   padding-top: 10px;
+  padding-left: 10px;
   font-weight: 700;
 }
 
@@ -182,20 +200,14 @@ main .catalogo .fixed-bar .btn-upgrade {
   padding: 5px 20px;
   margin-right: 30px;
 }
-/* CATALOGO SCROLLABLE */
-/* NAVBAR */
-main .catalogo .scrollable .navbar ul {
-  justify-content: center;
-  list-style: none;
-}
 
-main .catalogo .scrollable .navbar ul li a {
-  font-size: 12px;
-  text-decoration: none;
-  color: #fff;
-  opacity: 0.5;
-  padding: 10px;
+main .catalogo .fixed-bar .btn-upgrade:hover {
+  resize: both;
+  font-size: 16px;
+  padding: 10px 30px;
+  transition: padding 0.4s;
 }
+/* CATALOGO SCROLLABLE */
 /* SCROLLABLE */
 main .catalogo .scrollable {
   height: 100%;
@@ -212,7 +224,38 @@ main .catalogo .scrollable .creato,
 main .catalogo .scrollable .artisti {
   flex-wrap: wrap;
 }
+/* NAVBAR */
+main .catalogo .scrollable .navbar ul {
+  justify-content: center;
+  list-style: none;
+}
 
+main .catalogo .scrollable .navbar ul li a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5;
+  padding: 10px;
+}
+
+main .catalogo .scrollable .navbar ul li::after {
+  content:'';
+  display: block;
+  width: 50px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  margin: 5px auto;
+}
+
+main .catalogo .scrollable .navbar ul li:hover::after {
+  content:'';
+  display: block;
+  width: 50px;
+  border: 2px solid #acfe2e;
+  border-radius: 4px;
+  margin: 5px auto;
+}
+/* SCROLLABLE */
 main .catalogo .scrollable a {
   color: #ffffff;
 }
@@ -232,12 +275,25 @@ main .catalogo .scrollable h3 ~ p {
   font-weight: 400;
   opacity: 0.5;
 }
-
+/* COPERTINA */
 main .catalogo .scrollable .copertina {
   width: calc(100% / 6);
+  position: relative;
   padding: 5px;
 }
-
+                                                 /* ATTENZIONE */
+                                                 /* DA SISTEMARE!! */
+main .catalogo .scrollable .copertina:hover::after {
+  content: '\f144';
+  color: #fff;
+  background: #fff;
+  font-size: 100px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50% , -30%);
+}
+                                                    /* ATTENZIONE */
 main .catalogo .scrollable .artisti img {
   border-radius: 50%;
 }
@@ -350,10 +406,10 @@ footer .media .volume {
 /* VERSIONE DESKTOP */
 @media screen and (min-width: 1120px) {
   .display-desktop {
-    display: none;
+    display: inline-block;
   }
   .display-mobile {
-    display: inline-block;
+    display: none;
   }
 }
 
@@ -362,10 +418,10 @@ footer .media .volume {
   main .catalogo .scrollable .copertina {
     width: calc(100% / 4);
   }
-  .display-desktop {
+  .display-mobile {
     display: none;
   }
-  .display-mobile {
+  .display-desktop {
     display: inline-block;
   }
 }
@@ -378,31 +434,42 @@ footer .media .volume {
   footer .album-icon {
     flex-basis: 50px;
   }
-  .display-desktop {
+  /* UTILITY */
+  .display-mobile {
     display: inline-block;
   }
-  .display-mobile {
+  .display-desktop {
     display: none;
   }
+  /* MENU COLONNA LATERALE */
   main .menu {
     flex-basis: 55px;
   }
   main .menu img {
     margin-right: 0;
   }
+  main .menu .colonna-laterale > a img  {
+    margin-left: 0;
+  }
+  main .menu .colonna-laterale li {
+    padding-left: 0;
+  }
   main .menu .colonna-laterale > a img {
     height: 25px;
     opacity: 1;
   }
+  /* COLONNA LATERALE JOHNDOE */
   main .menu .johndoe .installa a {
     border: none;
   }
   main .menu .johndoe .installa a i {
     margin-left: 10px;
   }
-  main .menu .johndoe .profile img {
-    margin: 0 auto;
+  main .menu .johndoe .profile {
+    justify-content: center;
+    transform: translateX(-8%);
   }
+  /* FOOTER */
   footer .album {
     max-width: 150px;
   }
