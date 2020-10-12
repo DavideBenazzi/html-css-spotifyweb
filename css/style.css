@@ -93,7 +93,7 @@ main .menu .colonna-laterale > a img {
 }
 
 main .menu img {
-  height: 25px;
+  height: 20px;
   margin-right: 10px;
   opacity: 0.75;
 }
@@ -140,8 +140,6 @@ main .menu .johndoe {
 main .menu .johndoe .installa a {
   color: #2f2f2f;
   font-weight: 700;
-  border-bottom: 2px solid;
-  padding-bottom: 10px;
   padding-left: 10px;
   display: inline-block;
   width: 100%;
@@ -159,6 +157,15 @@ main .menu .johndoe .installa a i {
   border: 2px solid;
   border-radius: 50%;
   padding: 3px;
+}
+
+main .menu .johndoe .installa::after {
+  content: '';
+  display: inline-block;
+  width: 90%;
+  margin-left: 5%;
+  border: 1px solid #2f2f2f;
+  border-radius: 4px;
 }
 
 main .menu .johndoe .profile {
@@ -484,6 +491,19 @@ footer .media a:hover .volume::after {
   }
 }
 
+/* VERSIONE PAD */
+@media screen and (max-width: 820px) {
+  main .catalogo .scrollable .copertina {
+    width: calc(100% / 3);
+  }
+  .display-mobile {
+    display: none;
+  }
+  .display-desktop {
+    display: inline-block;
+  }
+}
+
 /* VERSIONE MOBILE */
 @media screen and (max-width: 599px) {
   main .catalogo .scrollable .copertina {
@@ -492,7 +512,6 @@ footer .media a:hover .volume::after {
   footer .album-icon {
     flex-basis: 50px;
   }
-  /* UTILITY */
   .display-mobile {
     display: inline-block;
   }
@@ -512,16 +531,23 @@ footer .media a:hover .volume::after {
   main .menu .colonna-laterale li {
     padding-left: 0;
   }
+  main .menu .colonna-laterale li:hover {
+    margin-left: -14px;
+    padding-left: 12px;
+  }
   main .menu .colonna-laterale > a img {
     height: 25px;
     opacity: 1;
   }
   /* COLONNA LATERALE JOHNDOE */
   main .menu .johndoe .installa a {
-    border: none;
+    padding-bottom: 10px;
   }
   main .menu .johndoe .installa a i {
     margin-left: 10px;
+  }
+  main .menu .johndoe .installa::after {
+    display: none;
   }
   main .menu .johndoe .profile {
     justify-content: center;
